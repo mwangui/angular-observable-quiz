@@ -1,0 +1,30 @@
+<div class="profile-content-container" *ngFor="let user of users">
+
+  <div class="profile-avatar-container">
+     <img class="avatar" src="./assets{{ user.userInfo.avatarpath }}">
+  </div>
+
+  <div class="user-profile">
+    <ul *ngFor="let user of users">
+      <li><lable class="label">Name:</lable><span class="token">{{ user.userInfo.firstName }}  {{ user.userInfo.lastName }}</span></li>
+      <li><lable class="label">Email:</lable><span class="token">{{ user.userInfo.email }}</span></li>
+      <li><lable class="label">Phone:</lable><span class="token">{{ user.userInfo.phone }}</span></li>
+      <li><lable class="label">Mobild:</lable><span class="token">{{ user.userInfo.mobile }}</span></li>
+      <li><lable class="label">Location:</lable><span class="token">{{ user.userInfo.location }}</span></li>
+    </ul>
+  </div>
+</div>
+  <div class="user-stats-container">
+    <ul *ngFor="let user of users">
+      <li class="user-stats-ideas">
+        {{user.stats[0].title}}{{user.stats[0].total}}
+      </li>
+      <li class="user-stats-views">
+        {{user.stats[1].title}}{{user.stats[1].total}}
+      </li>
+      <li class="user-stats-views"></li>
+    </ul>
+  </div>
+
+
+

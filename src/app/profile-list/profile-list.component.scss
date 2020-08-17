@@ -1,0 +1,44 @@
+.profile-content-container {
+  background-color: #EEEEF0;
+  display: flex;
+
+  .profile-avatar-container {
+    width: 23%;
+    max-width: 150px;
+    padding: 1rem;
+
+    img {
+      border-color: #D8DDE1;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 50%;
+    }
+    .avatar {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .user-profile {
+    width: 77%;
+    ul {
+      padding: 0px;
+      li {
+        list-style: none;
+        line-height: 1.7em;
+        font-size: 1rem;
+
+        width: 65%;
+        .label {
+          color: #8F9295;
+
+        }
+        .token {
+          color: #404243;
+          margin-left: 0.5rem;
+        }
+      }
+
+    }
+  }
+}
+

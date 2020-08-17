@@ -1,0 +1,38 @@
+header {
+  background-color: #603A87;
+  display: flex;
+  height: 2.6rem;
+  width: 100%;
+
+  .back {
+    display: inline-block;
+    margin-left: 0.7rem;
+    margin-top: 0.4rem;
+    .material-icons {
+      font-size: 1.9rem;
+    }
+  }
+  h1 {
+    width: 100%;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+    color: #f5f5f5;
+    margin-top: 0.5rem;
+    letter-spacing: 1px;
+  }
+  .material-icons {
+    color: #fff;
+  }
+  .slide-menu {
+    position: relative;
+    right: 0px;
+    margin-top: 0.58rem;
+    margin-right: 1rem;
+    .material-icons {
+      font-size: 1.6rem;
+    }
+  }
+}
+
