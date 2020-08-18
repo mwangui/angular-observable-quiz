@@ -1,9 +1,7 @@
-<div class="profile-content-container" *ngFor="let user of users">
-
-  <div class="profile-avatar-container">
+<section *ngIf="users" class="profile-content-container">
+  <div class="profile-avatar-container" *ngFor="let user of users">
      <img class="avatar" src="./assets{{ user.userInfo.avatarpath }}">
   </div>
-
   <div class="user-profile">
     <ul *ngFor="let user of users">
       <li><lable class="label">Name:</lable><span class="token">{{ user.userInfo.firstName }}  {{ user.userInfo.lastName }}</span></li>
@@ -13,18 +11,39 @@
       <li><lable class="label">Location:</lable><span class="token">{{ user.userInfo.location }}</span></li>
     </ul>
   </div>
-</div>
-  <div class="user-stats-container">
-    <ul *ngFor="let user of users">
-      <li class="user-stats-ideas">
-        {{user.stats[0].title}}{{user.stats[0].total}}
-      </li>
-      <li class="user-stats-views">
-        {{user.stats[1].title}}{{user.stats[1].total}}
-      </li>
-      <li class="user-stats-views"></li>
-    </ul>
+</section>
+
+<section *ngIf="stats" class="user-stats-container">
+  <ul>
+    <li class="user-stats-ideas" *ngFor="let stat of stats">
+      <span class="score">{{stat.total}}</span>
+      <span class="title">{{stat.title}}</span>
+    </li>
+  </ul>
+</section>
+
+<section *ngIf="users" class="follow-status-container">
+  <ul>
+    <li><span class="following status-options select">FOLLOWING</span></li>
+    <li><span class="followers status-options">FOLLOWERS</span></li>
+  </ul>
+</section>
+
+<section class="followings-container" *ngFor="let user of users">
+  <div class="section-header">{{user.followingTitle}}</div>
+  <ul class="followings">
+    <li class="followee" *ngFor="let followee of user.followings">
+      <a href={{followee.targetUrl}}>
+        <img class="avatar-sm" src="./assets{{ followee.followee.avatar }}">
+        <div class="user-name">{{followee.followee.userDisplayName}}</div>
+      </a>
+    </li>
+  </ul>
+  <div class="see-all">
+    <a href="#">See All &gt;</a>
   </div>
+</section>
+
 
 
 

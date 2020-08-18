@@ -8,6 +8,7 @@ import { ProfilePageService } from '../profile-page.service';
 })
 export class ProfileListComponent implements OnInit {
   public users = [];
+  public stats = [];
   constructor(private _profilePageService: ProfilePageService) { }
 
   ngOnInit(): void {
@@ -16,9 +17,9 @@ export class ProfileListComponent implements OnInit {
         for (let key in data) {
           if (data.hasOwnProperty(key)) {
             this.users.push(data[key]);
-            //console.log(data);
           }
         }
+        this.stats = this.users[0].stats;
       });
   }
 

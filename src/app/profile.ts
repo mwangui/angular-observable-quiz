@@ -10,7 +10,10 @@ export interface IProfile {
       avatarPath: string;
       userId: string;
     };
-    stats: any;
+    stats: {
+      title: string;
+      total: string;
+    };
     followings: any;
   };
 }

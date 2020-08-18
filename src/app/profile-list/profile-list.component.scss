@@ -1,6 +1,7 @@
 .profile-content-container {
   background-color: #EEEEF0;
   display: flex;
+  border-bottom: 1px solid #EEEEF0;
 
   .profile-avatar-container {
     width: 23%;
@@ -8,7 +9,7 @@
     padding: 1rem;
 
     img {
-      border-color: #D8DDE1;
+      border-color: #d9dee2;
       border-style: solid;
       border-width: 2px;
       border-radius: 50%;
@@ -25,20 +26,105 @@
       li {
         list-style: none;
         line-height: 1.7em;
-        font-size: 1rem;
-
         width: 65%;
         .label {
-          color: #8F9295;
-
+          color: #8f9298;
         }
         .token {
           color: #404243;
           margin-left: 0.5rem;
         }
       }
+    }
+  }
+}
+.user-stats-container {
+  border-bottom: 1px solid #EEEEF0;
+  ul {
+    padding: 0px;
+    li {
+      list-style: none;
+      display: inline-block;
+      width: 33%;
+      text-align: center;
 
+      .score {
+        display: block;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        color: #404243;
+        font-weight: 400;
+      }
+      .title {
+        color: #8f9295;
+        font-size: 0.9rem;
+      }
     }
   }
 }
 
+.follow-status-container {
+  margin: 1rem 5rem 1.3rem 5rem;
+  ul {
+    padding: 0px;
+    li {
+      list-style: none;
+      color: #8f9295;
+      display: inline-block;
+      width: 50%;
+      text-align: center;
+      .status-options {
+        font-size: 0.9rem;
+        &.select {
+          color: #603a87;
+          border-bottom: 2px solid #603a87;
+          padding-bottom: 1px;
+        }
+      }
+    }
+  }
+}
+
+.followings-container {
+  font-size: 0.9rem;
+  .section-header {
+    color: #8f9295;
+    padding-left: 1rem;
+  }
+  ul {
+    padding: 0px;
+    li {
+      list-style: none;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #d8dde1;
+      a {
+        padding-left: 1rem;
+        img {
+          width: 40px;
+          display: inline-block;
+          border-radius: 50%;
+        }
+        .user-name {
+          display: inline-block;
+          margin-left: 0.4rem;
+          color: #404243;
+          position: relative;
+          font-size: 1rem;
+          top: -1rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .see-all {
+    text-align: right;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+    a {
+      color: #603a87;
+      text-decoration: none;
+    }
+  }
+
+}
